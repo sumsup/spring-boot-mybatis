@@ -14,8 +14,8 @@ public class SearchController {
     private SearchService searchService;
 
     @GetMapping("/search")
-    public List<SearchDTO> searchMemo(int writerId) throws Exception {
-        List<SearchDTO> dtoList = searchService.searchMemo(writerId);
+    public List<SearchDTO> searchMemo() {
+        List<SearchDTO> dtoList = searchService.searchMemo();
 
         return dtoList;
     }

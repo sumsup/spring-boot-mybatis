@@ -10,26 +10,28 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 
-@Slf4j
-@Configuration
-@MapperScan(basePackages = "com.memoapp.demo.mappers")
+//@Slf4j
+//@Configuration
+//@MapperScan(basePackages = "com.memoapp.demo.mappers")
+//@PropertySource("classpath:/application.properties")
 public class DatabaseConfiguration {
 
-    @Bean
-    public SqlSessionFactory sqlSessionFactory (DataSource dataSource) throws Exception {
-        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
-
-        sqlSessionFactory.setDataSource(dataSource);
-        sqlSessionFactory.setTypeAliasesPackage("com.example.demo.dto");
-
-        return sqlSessionFactory.getObject();
-    }
-
-    @Bean
-    public SqlSessionTemplate sqlSession (SqlSessionFactory sqlSessionFactory) {
-        return new SqlSessionTemplate(sqlSessionFactory);
-    }
+//    @Bean
+//    public SqlSessionFactory sqlSessionFactory (DataSource dataSource) throws Exception {
+//        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+//
+//        sqlSessionFactory.setDataSource(dataSource);
+//        sqlSessionFactory.setTypeAliasesPackage("com.example.demo.dto");
+//
+//        return sqlSessionFactory.getObject();
+//    }
+//
+//    @Bean
+//    public SqlSessionTemplate sqlSession (SqlSessionFactory sqlSessionFactory) {
+//        return new SqlSessionTemplate(sqlSessionFactory);
+//    }
 
 }
