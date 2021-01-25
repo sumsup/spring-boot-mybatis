@@ -1,4 +1,4 @@
-package com.memoapp.restservice;
+package com.memoapp.demo.restservice;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package com.memoapp.restservice;
+package com.memoapp.demo.restservice;
 
 public class Greeting {
 

@@ -1,4 +1,4 @@
-package com.memoapp.restservice.search;
+package com.memoapp.demo.dto;
 
 import lombok.Data;
 

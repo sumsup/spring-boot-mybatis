@@ -1,5 +1,7 @@
 package com.memoapp.demo;
 
+import javax.sql.DataSource;
+
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -10,10 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
-import javax.sql.DataSource;
-
-@ComponentScan("com.memoapp")
-@MapperScan("com.*.mapper")
 @SpringBootApplication
 public class DemoApplication {
 
@@ -26,7 +24,7 @@ public class DemoApplication {
 		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
 
-		Resource res = new PathMatchingResourcePatternResolver().getResource("classpath*:mappers/**/*Mapper.xml");
+		Resource res = new PathMatchingResourcePatternResolver().getResource("classpath*:mappers/*.xml");
 		sessionFactory.setMapperLocations(res);
 
 		return sessionFactory.getObject();
